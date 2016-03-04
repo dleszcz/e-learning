@@ -1,0 +1,30 @@
+nav {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.2);
+    padding: 10px;
+
+    img {
+        height: 40px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+
+        li {
+            float: left;
+
+            a {
+                display: block;
+                color: black;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+        }
+    }
+
+}

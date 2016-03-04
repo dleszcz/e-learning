@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="elearning">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+
+        <link rel="stylesheet" href="../css/index.css">
+        <link rel="icon" type="image/png" href="../images/pi.png"/>
+    </head>
+    <body>
+        <nav>
+            <div class="container">
+                <img src="../images/Common/PearsonEnglish%20Logo_Horizontal.png"/>
+                <ul class="pull-right">
+                    <li>
+                        <a ng-href="#/first">
+                            Exercise 1
+                        </a>
+                    </li>
+                    <li>
+                        <a ng-href="#/second">
+                            Exercise 2
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+            <ng-view>
+
+            </ng-view>
+        </div>
+
+        <footer>
+            <div class="container">
+                <img class="pull-left" src="../images/Common/pearson_logo.png">
+                <img class="pull-right" src="../images/Common/pearson_slogan.png">
+            </div>
+        </footer>
+    </body>
+
+    <script type="text/javascript" rel="script" src="../bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" rel="script" src="../bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" rel="script" src="../js/app.js"></script>
+    <script type="text/javascript" rel="script" src="../js/controllers/first-exercise-controller.js"></script>
+    <script type="text/javascript" rel="script" src="../js/controllers/second-exercise-controller.js"></script>
+</html>
