@@ -1,0 +1,45 @@
+.exercise {
+    img {
+        display: list-item;
+        height: 140px;
+        margin: 40px auto 0;
+    }
+
+    .btn-group {
+        display: table;
+        margin: 0 auto;
+
+        &.open {
+            button {
+                background: white;
+                color: black;
+
+                &.dropdown-toggle {
+                    &:focus,
+                    &:hover,
+                    &:active{
+                        background: white;
+                        color: black;
+                    }
+                }
+            }
+        }
+        button {
+
+            background: white;
+            color: black;
+
+            &:focus {
+                background: inherit;
+                color: inherit;
+            }
+        }
+    }
+
+    .row {
+        .btn {
+            display: table;
+            margin: 50px auto 0;
+        }
+    }
+}

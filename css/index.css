@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import url(../bower_components/angular-bootstrap/ui-bootstrap-csp.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -5847,3 +5848,28 @@ footer {
   width: 100%; }
   footer img {
     height: 15px; }
+
+.exercise img {
+  display: list-item;
+  height: 140px;
+  margin: 40px auto 0; }
+
+.exercise .btn-group {
+  display: table;
+  margin: 0 auto; }
+  .exercise .btn-group.open button {
+    background: white;
+    color: black; }
+    .exercise .btn-group.open button.dropdown-toggle:focus, .exercise .btn-group.open button.dropdown-toggle:hover, .exercise .btn-group.open button.dropdown-toggle:active {
+      background: white;
+      color: black; }
+  .exercise .btn-group button {
+    background: white;
+    color: black; }
+    .exercise .btn-group button:focus {
+      background: inherit;
+      color: inherit; }
+
+.exercise .row .btn {
+  display: table;
+  margin: 50px auto 0; }
