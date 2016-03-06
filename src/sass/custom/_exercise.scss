@@ -1,8 +1,15 @@
 .exercise {
     img {
         display: list-item;
-        height: 140px;
         margin: 40px auto 0;
+
+        &.img-sm {
+            height: 140px;
+        }
+
+        &.img-lg {
+            height: 352px;
+        }
     }
 
     .btn-group {
@@ -25,13 +32,22 @@
             }
         }
         button {
-
-            background: white;
             color: black;
+            width:220px;
 
             &:focus {
                 background: inherit;
                 color: inherit;
+            }
+
+            &.btn-danger,
+            &.btn-success {
+                color: white;
+                &:focus,
+                &:active {
+                    background: white;
+                    color: black;
+                }
             }
         }
     }
@@ -40,6 +56,18 @@
         .btn {
             display: table;
             margin: 50px auto 0;
+
+            &.btn-previous {
+                &::before {
+                    content: "\2190";
+                }
+            }
+
+            &.btn-next {
+                &::after {
+                    content: "\2192";
+                }
+            }
         }
     }
 }

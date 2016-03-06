@@ -1,4 +1,4 @@
-var app = angular.module("elearning", ['ngRoute', 'ui.bootstrap']);
+var app = angular.module("elearning", ['ngRoute', 'ui.bootstrap', 'ngSanitize', 'mgcrea.ngStrap']);
 
 app.config(function($routeProvider) {
     $routeProvider

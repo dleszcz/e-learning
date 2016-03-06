@@ -33,11 +33,16 @@ app.factory("FirstExerciseFactory", function() {
     ],
 
     page = {
-        title :'Exercise 1'
+        title : 'Exercise 1'
+    },
+
+    shuffle = {
+        shuffleItems : shuffleItems(angular.copy(items))
     };
 
     return {
         items : items,
-        page : page
-    }
+        page : page,
+        shuffle : shuffle
+   };
 });

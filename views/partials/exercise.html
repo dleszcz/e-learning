@@ -2,43 +2,42 @@
     <h1>{{title}}</h1>
     <h2>{{subtitle}}</h2>
 
+
     <div ng-repeat="item in items" class="col-xs-12 col-sm-6 col-md-4">
-        <img ng-src="{{ item.src }}" alt="image{{ $index }}"/>
+        <img ng-src="{{ item.src }}" alt="image{{ $index }}" class="{{imageHeight}}"/>
 
-        <div class="btn-group" uib-dropdown is-open="item.status.isopen">
-            <button
-                    id="single-button"
-                    type="button"
-                    class="btn btn-primary"
-                    uib-dropdown-toggle
-                    ng-disabled="disabled"
-                    value="{{ item.id }}">
-
-                Select a label <span class="caret"></span>
+        <div class="btn-group">
+            <button type="button"
+                    class="btn btn-default btn-option"
+                    ng-model="selectedOption"
+                    data-html="1"
+                    bs-options="option.id as option.name for option in shuffleItems"
+                    bs-select
+                    value="{{selectedOption}}"
+                    placeholder="{{select}}"
+                    >
             </button>
-            <ul uib-dropdown-menu role="menu" aria-labelledby="single-button">
-                <li role="menuitem" ng-repeat="option in items">
-                    <a href="">
-                        {{ option.name }}
-                    </a>
-                </li>
-            </ul>
         </div>
     </div>
+
     <div class="row">
         <div class="col-xs-4">
-            <a href="" class="btn">
-                previous
+            <a class="btn btn-default btn-previous" ng-href="{{previousHref}}" ng-disabled="previousDisabled">
+                {{previous}}
             </a>
         </div>
         <div class="col-xs-4">
-            <a href="" class="btn">
-                check answers
+            <a href="" class="btn btn-default" ng-click="button_clicked||checkAllAnswers()" ng-disabled="button_clicked" ng-show="!checked">
+                {{ checkAnswers }}
+            </a>
+
+            <a href="" class="btn btn-default" ng-click="clear()" ng-show="checked">
+                {{ tryAgain }}
             </a>
         </div>
         <div class="col-xs-4">
-            <a href="" class="btn">
-                next
+            <a class="btn btn-default btn-next" ng-href="{{nextHref}}" ng-disabled="nextDisabled">
+                {{next}}
             </a>
         </div>
     </div>

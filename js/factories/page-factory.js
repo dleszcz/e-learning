@@ -6,10 +6,11 @@ app.factory("PageFactory", function() {
             previous : 'Previous',
             next : 'Next',
             checkAnswers : 'Check answers',
-            tryAgain : 'Try again'
+            tryAgain : 'Try again',
+            selectLabel : 'Select a label'
         };
 
     return {
         messages : messages
-    }
+    };
 });

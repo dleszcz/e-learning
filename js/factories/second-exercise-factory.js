@@ -16,12 +16,18 @@ app.factory("SecondExerciseFactory", function() {
             src : '../images/Exercise 2/Time_talent_spoke_for_itself.jpg'
         }
     ],
-        page = {
-            title :'Exercise 2'
-        };
+
+    page = {
+        title :'Exercise 2'
+    },
+
+    shuffle = {
+        items : shuffleItems(items)
+    };
 
     return {
         items : items,
-        page : page
+        page : page,
+        shuffle : shuffle
     }
 });
